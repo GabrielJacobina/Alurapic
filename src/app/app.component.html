@@ -1,6 +1,5 @@
 <ap-photo
-  url="https://thumbs.jusbr.com/imgs.jusbr.com/publications/artigos/144922528/images/1412967253.jpeg"
-  description="Leão"></ap-photo>
-<ap-photo
-  url="https://img.elo7.com.br/product/zoom/26E2E5A/placa-decorativa-leoa-natureza-selvagem-placa-adesivada.jpg"
-  description="Leoa"></ap-photo>
+  *ngFor="let photo of photos"
+  [url]="photo.url"
+  description="photo.description">
+</ap-photo>
