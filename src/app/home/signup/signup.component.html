@@ -44,7 +44,7 @@
       text="Maximum length is 30">
     </ap-vmessage>
     <ap-vmessage
-      *ngIf="signupFrom.get('userName').errors?.pattern"
+      *ngIf="signupFrom.get('userName').errors?.lowerCase"
       text="Must be lower case">
     </ap-vmessage>
   </div>
