@@ -5,7 +5,8 @@ import {RouterModule} from '@angular/router';
 
 import {SigninComponent} from './signin/signin.component';
 import {VMessageModule} from '../shared/components/vmessage/vmessage.module';
-import { SignupComponent } from './signup/signup.component';
+import {SignupComponent} from './signup/signup.component';
+import {HomeComponent} from './home.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import { SignupComponent } from './signup/signup.component';
     VMessageModule,
     RouterModule
   ],
-  declarations: [SigninComponent, SignupComponent]
+  declarations: [
+    SigninComponent,
+    SignupComponent,
+    HomeComponent
+  ]
 })
-export class HomeModule { }
+export class HomeModule {}
