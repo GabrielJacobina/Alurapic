@@ -9,11 +9,12 @@ import {PlatformDetectorService} from '../../core/platform-detector/platform-det
 
 @Component({
   templateUrl: './signup.component.html',
+  providers: [UserNotTakenValidatorService]
 })
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup;
-  @ViewChild('emailInput')  emailInput: ElementRef<HTMLInputElement>;
+  @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>;
 
 
   constructor(
@@ -58,7 +59,7 @@ export class SignupComponent implements OnInit {
       ],
     });
     this.platformDetectorService.isPlatformBrowser() &&
-      this.emailInput.nativeElement.focus();
+    this.emailInput.nativeElement.focus();
   }
 
   signup() {
